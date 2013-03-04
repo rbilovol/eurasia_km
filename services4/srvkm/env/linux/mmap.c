@@ -1077,7 +1077,8 @@ PVRMMap(struct file* pFile, struct vm_area_struct* ps_vma)
     PVR_DPF((PVR_DBG_MESSAGE, "%s: Mapped psLinuxMemArea 0x%p\n",
          __FUNCTION__, psOffsetStruct->psLinuxMemArea));
 
-    ps_vma->vm_flags |= VM_RESERVED;
+/* Ruslan: VM_RESERVED removed form 3.8 */
+/*    ps_vma->vm_flags |= VM_RESERVED;*/
     ps_vma->vm_flags |= VM_IO;
 
     /*

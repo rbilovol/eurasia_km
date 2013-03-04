@@ -256,7 +256,7 @@ MODULE_DEVICE_TABLE(pci, powervr_id_table);
 #endif
 
 #if defined(PVR_USE_PRE_REGISTERED_PLATFORM_DEV)
-static struct platform_device_id powervr_id_table[] __devinitdata = {
+static struct platform_device_id powervr_id_table[] __initdata = {
 	{SYS_SGX_DEV_NAME, 0},
 	{}
 };
