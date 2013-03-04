@@ -1255,7 +1255,10 @@ static INLINE IMG_UINT32 GetDirListBaseReg(IMG_UINT32 ui32Index)
 }
 #endif
 
+#if 0 /* Ruslan: FIXME */
+/* Temporary disable until corresponding 3.8 function will be available */
 void dsscomp_kdump(void);
+#endif
 /*!
 *******************************************************************************
 
@@ -1277,7 +1280,10 @@ IMG_VOID SGXDumpDebugInfo (PVRSRV_SGXDEV_INFO	*psDevInfo,
 {
 	IMG_UINT32	ui32CoreNum;
 
+#if 0 /* Ruslan: FIXME */
+/* Temporary disable until corresponding 3.8 function will be available */
 	dsscomp_kdump();
+#endif
 
 	PVR_LOG(("SGX debug (%s)", PVRVERSION_STRING));
 
