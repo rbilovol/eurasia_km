@@ -1565,7 +1565,7 @@ NewIONLinuxMemArea(IMG_UINT32 ui32Bytes, IMG_UINT32 ui32AreaFlags,
 
 			asAllocData[i].handle = ion_alloc (gpsIONClient,
 				ui32Bytes,
-				PAGE_SIZE, (1 << OMAP_ION_HEAP_SYSTEM));
+				PAGE_SIZE, (1 << OMAP_ION_HEAP_SYSTEM), 0);
 
 			if (asAllocData[i].handle == NULL)
 			{

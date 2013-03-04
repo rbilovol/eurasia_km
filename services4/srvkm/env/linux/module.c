@@ -357,9 +357,16 @@ static int __devinit PVRSRVDriverProbe(LDM_DEV *pDevice, const struct pci_device
 
 #if defined(CONFIG_ION_OMAP)
 	gpsIONClient = ion_client_create(omap_ion_device,
+#if 0
+/*
+ * Ruslan: this argument was removed in ION
+ * See commit 68d0fcfb4ec48060f00052ac965c6067326c4d47
+ * (gpu: ion: Remove heapmask from client)
+ */
 			1 << ION_HEAP_TYPE_CARVEOUT |
 			1 << OMAP_ION_HEAP_TYPE_TILER |
 			1 << ION_HEAP_TYPE_SYSTEM,
+#endif
 			"pvr");
 	if (IS_ERR_OR_NULL(gpsIONClient))
 	{
